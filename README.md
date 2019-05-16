@@ -1,2 +1,2 @@
 # vitaliyivanovich.github.io
-первый сайт
+Первый опубликованный сайт
