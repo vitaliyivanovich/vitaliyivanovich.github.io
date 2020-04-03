@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="jquery.pagepiling.js"></script>
+	<script>
+		$(document).ready(function() {
+
+					/*
+					* Plugin intialization
+					*/
+					$('#pagepiling').pagepiling({
+						menu: '#menu',
+						anchors: ['main', 'page2', 'page3', 'page4'],
+						sectionsColor: [],
+						navigation: {
+							'position': 'right',
+							'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+						},
+						afterRender: function(){
+							$('#pp-nav').addClass('custom');
+						},
+						afterLoad: function(anchorLink, index){
+							if(index>1){
+								$('#pp-nav').removeClass('custom');
+							}else{
+								$('#pp-nav').addClass('custom');
+							}
+							if(index == 2) {
+								document.querySelector('.appear1').classList.add('appear');
+								document.querySelector('.appear2').classList.add('appear');
+							}
+							if(index == 3) {
+								document.querySelector('.animation1').classList.add('appear','animated','fadeInLeft' );
+								document.querySelector('.animation2').classList.add('appear','animated','fadeInRight');
+							}
+							if(index == 4) {
+								document.querySelector('.animation3').classList.add('appear','animated','fadeInUp' );
+								document.querySelector('.animation4').classList.add('appear','animated','fadeInDown');
+							}
+						}
+					});
+				});
+	</script>
+	<title>	verstka </title>
+</head>
+<body>
+	<nav class="main-navigation">
+	<ul id="menu">
+	    <li data-menuanchor="main" class="active"><a href="#main">First section</a></li>
+	    <li data-menuanchor="page2"><a href="#page2">Second section</a></li>
+	    <img src="img/tribal.ico" alt="">
+	    <li data-menuanchor="page3"><a href="#page3">Third section</a></li>
+	    <li data-menuanchor="page4"><a href="#page4">Fourth section</a></li>
+	</ul>
+	</nav>
+	<div id="pagepiling">
+		<div class="section section1">
+			<div class="hero-main">
+				<video autoplay="" loop="" muted="" id="myVideo">
+								<source src="img/flame2cut.mp4" type="video/mp4">
+								<source src="img/flame2.webm" type="video/webm">
+				</video>
+				<div class="hero-main__title">
+					<h1>Tribal is an isometric online role-playing game with focus on adventures and exploration. It actively encourages roleplay, rewarding you with faster progression if your choices reflect your characters traits and personality. First of its kind, Tribal has permanent world altering events which take place in a fantasy world based on early medieval times, slavic mythology and folk tales.  Here's a short summary of game features which we would like to share with you:</h1>
+				</div>
+			</div>
+		</div>
+		<div class="section section2">
+			<div class="featureitem appear1">
+				<div class='featureitem__header'>
+					<div class="featureitem__img">
+						<img  src="img/usp_rog.png" alt="">
+					</div>
+					<h2>Пригоди та дослідження</h2>
+				</div>
+				<p>Повністю динамічне і мінливе навколишнє середовище робить цей світ живим. Пори року змінюються, на річках трапляються повені, вулкани вивергаються, ліси згорають та відновлюються, міста та поселення руйнуються катаклізмами. Подорожуючи цим світом, будь-що може трапитися: можна отримати нове завдання чи знайти якогось мертвеця зі скарбом. Чи, можливо, голодний ведмідь відчує Вас та розпочне полювання. Або ж, член загону підхопить болячку та не матиме змоги продовжувати похід чи навіть гірше - вмре... Маленька подорож до сусіднього міста може обернутись чудернацькою пригодою, що приведе Вас до невідомих місць де Ви можете натрапити на легендарні артефакти. Або отримаєте квиток в один кінець. Будь-що може трапитись....</p>
+			</div>
+			<div class="featureitem appear2">
+				<div class='featureitem__header'>
+					<div class="featureitem__img">
+						<img  src="img/usp_rog.png" alt="">
+					</div>
+					<h2>Пригоди та дослідження</h2>
+				</div>
+				<p>Повністю динамічне і мінливе навколишнє середовище робить цей світ живим. Пори року змінюються, на річках трапляються повені, вулкани вивергаються, ліси згорають та відновлюються, міста та поселення руйнуються катаклізмами. Подорожуючи цим світом, будь-що може трапитися: можна отримати нове завдання чи знайти якогось мертвеця зі скарбом. Чи, можливо, голодний ведмідь відчує Вас та розпочне полювання. Або ж, член загону підхопить болячку та не матиме змоги продовжувати похід чи навіть гірше - вмре... Маленька подорож до сусіднього міста може обернутись чудернацькою пригодою, що приведе Вас до невідомих місць де Ви можете натрапити на легендарні артефакти. Або отримаєте квиток в один кінець. Будь-що може трапитись....</p>
+			</div>
+		</div>
+		<div class="section section3">
+			<div class="featureitem animation1">
+				<div class='featureitem__header'>
+					<div class="featureitem__img">
+						<img  src="img/usp_rog.png" alt="">
+					</div>
+					<h2>Пригоди та дослідження</h2>
+				</div>
+				<p>Повністю динамічне і мінливе навколишнє середовище робить цей світ живим. Пори року змінюються, на річках трапляються повені, вулкани вивергаються, ліси згорають та відновлюються, міста та поселення руйнуються катаклізмами. Подорожуючи цим світом, будь-що може трапитися: можна отримати нове завдання чи знайти якогось мертвеця зі скарбом. Чи, можливо, голодний ведмідь відчує Вас та розпочне полювання. Або ж, член загону підхопить болячку та не матиме змоги продовжувати похід чи навіть гірше - вмре... Маленька подорож до сусіднього міста може обернутись чудернацькою пригодою, що приведе Вас до невідомих місць де Ви можете натрапити на легендарні артефакти. Або отримаєте квиток в один кінець. Будь-що може трапитись....</p>
+			</div>
+			<div  class="featureitem animation2">
+				<div class='featureitem__header'>
+					<div class="featureitem__img">
+						<img  src="img/usp_rog.png" alt="">
+					</div>
+					<h2>Пригоди та дослідження</h2>
+				</div>
+				<p>Повністю динамічне і мінливе навколишнє середовище робить цей світ живим. Пори року змінюються, на річках трапляються повені, вулкани вивергаються, ліси згорають та відновлюються, міста та поселення руйнуються катаклізмами. Подорожуючи цим світом, будь-що може трапитися: можна отримати нове завдання чи знайти якогось мертвеця зі скарбом. Чи, можливо, голодний ведмідь відчує Вас та розпочне полювання. Або ж, член загону підхопить болячку та не матиме змоги продовжувати похід чи навіть гірше - вмре... Маленька подорож до сусіднього міста може обернутись чудернацькою пригодою, що приведе Вас до невідомих місць де Ви можете натрапити на легендарні артефакти. Або отримаєте квиток в один кінець. Будь-що може трапитись....</p>
+			</div>
+		</div>
+		<div class="section section4">
+			<div class="specialfeatureitem">
+				<div class="specialfeatureitem__text animation3">
+					<h2>Adventures and exploration</h2>
+					<p>A fully dynamic and ever-changing world map is what makes this world alive. Seasons will change, rivers flood, volcanoes erupt, forests burn down and regrow, cities and villages get destroyed by cataclysms. Different events will happen when you're travelling through the world. You can pick up a new quest or you can find someones else's corpse full of loot. Or maybe a hungry bear senses you and will try to kill you. Or your squad member gets sick and becomes unable to continue the journey, or worse, he dies... A small trip to a nearby town might become a full-blown adventure leading to unknown places where you could find a legendary artifact or it might become a one-way trip. Anything can happen...</p>
+				</div>
+				<div class="specialfeatureitem__img animation4">
+					<img src="img/shieldandsword.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
